@@ -3,8 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo com Bootstrap</title>
+    <title>Rafael Vieira | Desenvolvedor Fullstack</title>
+    <link rel="icon" type="image/svg+xml" 
+        href="data:image/svg+xml,
+        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <rect width='100' height='100' fill='%230d6efd'/>
+        <text x='50' y='60' font-size='45' text-anchor='middle' fill='white' font-family='Arial'>RV</text></svg>">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        .card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+    </style>
 </head>
 <body class="bg-light pb-5">
 
@@ -15,18 +29,229 @@
                     João Pessoa-PB |
                     (83) 99819-8629 |
                     rafaelovieira.dev@gmail.com |
-                    <a href="https://www.linkedin.com/in/rafaelovieira/" target="_blanck" class="link-light">Linkedin</a> |
-                    <a href="https://github.com/rafaelovieira" target="_blanck" class="link-light">Github</a>
+                    <a href="https://www.linkedin.com/in/rafaelovieira/" target="_blank" class="link-light">Linkedin</a> |
+                    <a href="https://github.com/rafaelovieira" target="_blank" class="link-light">Github</a>
                 </p>
         </header>
         
         <section class="bg-white rounded shadow-sm my-4 p-4">
             <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3"> Resumo </h2>
-                <p class="lh-lg fs-6 text-justify">
-                    Sou um profissional em transição de carreira para a área de Tecnologia da Informação, com uma sólida experiência em análise de dados, gestão logística e processos operacionais.
-                    Tenho conhecimentos em SQL, Power BI, bancos de dados e Java básico, aliados à vivência prática em análise de indicadores e otimização de processos.
-                    Atualmente curso Análise e Desenvolvimento de Sistemas, Java e Formação Fullstack Developer, buscando aplicar meu perfil analítico em soluções de dados e desenvolvimento de sistemas.
+                <p class="lh-lg fs-6">
+                    Desenvolvedor Fullstack em formação com experiência prática em SQL, PostgreSQL e análise de dados em ambiente corporativo. 
+                    Possuo background em logística e dados, o que me permite compreender processos de negócio e transformá-los em soluções 
+                    tecnológicas utilizando Java, Spring Boot, JavaScript e React.
                 </p>
+        </section>
+
+        <section class="bg-white p-4 rounded shadow my-4">
+            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-4">Competências Técnicas</h2>
+            <div class="row">
+
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-semibold">Frontend</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="me-2" style="width:25px;">
+                            HTML
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="me-2" style="width:25px;">
+                            CSS
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="me-2" style="width:25px;">
+                            JavaScript
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="me-2" style="width:25px;">
+                            React
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-semibold">Backend</h5>
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="me-2" style="width:25px;">
+                            Java
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" class="me-2" style="width:25px;">
+                            Spring Boot
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://img.icons8.com/fluency/48/sql.png" class="me-2" style="width:25px;">
+                            SQL
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="me-2" style="width:25px;">
+                            PostgreSQL
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-semibold">Data & Analytics</h5>
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" class="me-2" style="width:25px;">
+                            Power BI
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="https://img.icons8.com/color/48/microsoft-excel-2019--v1.png" class="me-2" style="width:25px;">
+                            Excel Avançado
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white rounded shadow-sm my-4 p-4">
+            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-4">Projetos</h2>
+            <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Sistema Clínica Médica</h5>
+                        <p class="card-text">
+                            Sistema web para gerenciamento de médicos, pacientes e consultas com operações CRUD.
+                        </p>
+                        <p class="text-muted small">
+                            Javascript • React • Bootstrap • API REST
+                        </p>
+                        <a href="https://github.com/rafaelovieira/sistema-clinica-medica" target="_blank" class="btn btn-outline-primary btn-sm">
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">ETL e DataViz</h5>
+                        <p class="card-text">
+                            Projeto de Business Intelligence incluindo processo de ETL, consultas SQL e criação de dashboard.
+                        </p>
+                        <p class="text-muted small">
+                            SQL • Power BI • PostgreSQL
+                        </p>
+                        <a href="https://github.com/rafaelovieira/treinamento-decisions-card" target="_blank" class="btn btn-outline-primary btn-sm">
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Portifólio </h5>
+                        <p class="card-text">
+                            Projeto web em construção.
+                        </p>
+                        <p class="text-muted small">
+                            HTML • Bootstrap • CSS
+                        </p>
+                        <a href="https://github.com/rafaelovieira" target="_blank" class="btn btn-outline-primary btn-sm">
+                            Ver no GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <section class="bg-white rounded shadow-sm my-4 p-4">
+            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3">Cursos e Certificações</h2>
+                <ul class="lh-lg fs-6">
+                    <li>Spring Boot - Udemy</li>
+                    <li>Desenvolvedor FullStack - ProgramaAI</li>
+                    <li>Java - ProgramaAI</li>
+                    <li>Power BI - Hashtag Treinamentos</li>
+                    <li>Algoritmos e Lógica de Programação - Udemy</li>
+                    <li> Excel Avançado - Guia do Excel</li>
+                </ul>
+        </section>
+
+        <section class="bg-white rounded shadow-sm my-4 p-4">
+            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3">Experiências Profissionais</h2>
+                
+                <article class="mb-4">
+                <h5>Target Consulting - Analista de Dados</h5>
+                <span class="text-muted">dez 2025 - mar 2026</span>
+                <ul>
+                    <li>Coleta, organização e atualização de bases de dados comerciais e operacionais;</li> 
+                    <li>Desenvolvimento de relatórios gerenciais e dashboards em Excel e Power BI;</li>
+                    <li>Análise de indicadores de vendas, performance e resultados;</li>
+                    <li>Apoio à elaboração de apresentações executivas com base em dados;</li>
+                    <li>Organização de documentos, controles administrativos e históricos de projetos;</li>
+                    <li>Suporte a times comerciais e/ou projetos de consultoria.</li>    
+                </ul>
+                </article>
+                <br>
+                <article class="mb-4">
+                <h5>Analytical Decision - Trainee Analista de Dados</h5>
+                <span class="text-muted">set de 2025 - dez de 2025</span>
+                <ul>
+                    <li>Manipulação e análise de dados utilizando SQL e PostgreSQL;</li>
+                    <li>Desenvolvimento de dashboards interativos em Power BI;</li>
+                    <li>Participação em desafios de modelagem e otimização de consultas.</li>
+                </ul>
+                </article>
+                <br>
+                <article class="mb-4">
+                <h5>São Braz - Analista de Logística II</h5>
+                <span class="text-muted">ago de 2022 - set de 2025</span>
+                <ul>
+                    <li>Gerenciamento do abastecimento das filiais, garantindo eficiência e redução de falhas no processo;</li>
+                    <li>Elaboração e análise dos inventários no sistema WMS, consolidando informações para auditorias internas;</li>
+                    <li>Controle do estoque contábil e físico, otimizando o fluxo de mercadorias.</li>
+                </ul>
+                </article>
+                <br>
+                <article class="mb-4">
+                <h5>Assaí Atacadista - Supervisor de Recebimento</h5>
+                <span class="text-muted">ago de 2021 - ago de 2022</span>
+                <ul>
+                    <li>Responsável pela parte administrativa do recebimento de mercadorias da loja de Cabedelo;</li>
+                    <li>Análise de notas fiscais e entrada/saída no sistema da empresa;</li>
+                    <li>Análise tributária, como impostos e custos das mercadorias recebidas;</li>
+                    <li>Gerenciamento de inventário e estoque.</li>
+                </ul>
+                </article>
+                <br>
+                <article class="mb-4">
+                <h5>Mineirão Atacarejo - Analista Administrativo</h5>
+                <span class="text-muted">abr de 2020 - jul de 2021</span>
+                <ul>
+                    <li>Gestão de indicadores logísticos no SAP;</li>
+                    <li>Apoio à liderança na elaboração de planos de ação e acompanhamento de KPIs;</li>
+                    <li>Controle de estoque e fluxo de materiais.</li>
+                </ul>
+                </article>
+                <br>
+                <article class="mb-4">
+                <h5>Makro Atacadista S/A - Encarregado de Logística</h5>
+                <span class="text-muted">abr de 2010 - dez de 2018</span>
+                <ul>
+                    <li>Gestão de equipe e planejamento do recebimento de mercadorias;</li>
+                    <li>Emissão de documentos fiscais (DANFE, CTe) e relatórios gerenciais;</li>
+                    <li>Controle de estoque e suporte às áreas administrativas.</li>
+                </ul>
+                </article>
         </section>
 
         <section class="bg-white rounded shadow-sm my-4 p-4">
@@ -45,107 +270,13 @@
         </section>
 
         <section class="bg-white rounded shadow-sm my-4 p-4">
-            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3">Experiências Profissionais</h2>
-                <ul>
-                    <li><strong>Analytical Decision - Trainee Data Analyst</strong></li>
-                    <small class="text-muted">set de 2025 - até o momento</small> <br/>
-                        <p class="lh-lg fs-6 text-justify">
-                            - Manipulação e análise de dados utilizando SQL e PostgreSQL; <br> 
-                            - Desenvolvimento de dashboards interativos em Power BI; <br>
-                            - Participação em desafios de modelagem e otimização de consultas.
-                        </p>
-                </ul>
-                <br>
-                 <ul>
-                    <li><strong>São Braz - Analista de Logística II</strong></li>
-                    <small class="text-muted">ago de 2022 - set de 2025</small> <br>
-                        <p class="lh-lg fs-6 text-justify">
-                            - Gerenciamento do abastecimento das filiais, garantindo eficiência e redução de falhas no processo; <br>
-                            - Elaboração e análise dos inventários no sistema WMS, consolidando informações para auditorias internas; <br>
-                            - Controle do estoque contábil e físico, otimizando o fluxo de mercadorias. <br>
-                        </p>
-                </ul>
-                <br>
-                <ul>
-                    <li><strong>Assaí Atacadista - Supervisor de Recebimento</strong></li>
-                    <small class="text-muted">ago de 2021 - ago de 2022</small> <br>
-                        <p class="lh-lg fs-6 text-justify">
-                            - Responsável pela parte administrativa do recebimento de mercadorias da loja de Cabedelo; <br>
-                            - Análise de notas fiscais e entrada/saída no sistema da empresa; <br>
-                            - Análise tributária, como impostos e custos das mercadorias recebidas; <br>
-                            - Gerenciamento de inventário e estoque.
-                        </p>
-                </ul>
-                <br>
-                <ul>
-                    <li><strong>Mineirão Atacarejo - Analista Administrativo</strong></li>
-                    <small class="text-muted">abr de 2020 - jul de 2021</small> <br>
-                        <p class="lh-lg fs-6 text-justify">
-                            - Gestão de indicadores logísticos no SAP; <br>
-                            - Apoio à liderança na elaboração de planos de ação e acompanhamento de KPIs; <br>
-                            - Controle de estoque e fluxo de materiais.
-                        </p>
-                </ul>
-                <br>
-                <ul>
-                    <li><strong>Makro Atacadista S/A - Encarregado de Logística</strong></li>
-                    <small class="text-muted">abr de 2010 - dez de 2018</small> <br>
-                        <p class="lh-lg fs-6 text-justify">
-                            - Gestão de equipe e planejamento do recebimento de mercadorias; <br>
-                            - Emissão de documentos fiscais (DANFE, CTe) e relatórios gerenciais; <br>
-                            - Controle de estoque e suporte às áreas administrativas
-                        </p>
-                </ul>
-        </section>
-
-        <section class="bg-white p-4 rounded shadow">
-            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3">Habilidades</h2>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://img.icons8.com/fluency/48/sql.png" class="img-fluid me-2" style="width: 25px;"> SQL </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="img-fluid me-2" style="width: 25px;"> PostgreSQL </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" class="img-fluid me-2" style="width: 25px;"> Power BI </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="img-fluid me-2" style="width: 25px;"> Java </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="img-fluid me-2" style="width: 25px;"> HTML </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="img-fluid me-2" style="width: 25px;"> CSS </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="img-fluid me-2" style="width: 25px;"> JavaScript </li>
-                
-                    <li class="list-group-item d-flex align-items-center">
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="img-fluid me-2" style="width: 25px;"> React </li> 
-                </ul>
-        </section>
-
-        <section class="bg-white rounded shadow-sm my-4 p-4">
-            <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3">Cursos e Certificações</h2>
-                <ul class="lh-lg fs-6 text-justify">
-                    <li>Java - ProgramaAI</li>
-                    <li>Desenvolvedor FullStack - ProgramaAI</li>
-                    <li>Power BI - Hashtag Treinamentos</li>
-                    <li>Algoritmos e Lógica de Programação - Udemy</li>
-                    <li> Excel Avançado - Guia do Excel</li>
-                </ul>
-        </section>
-
-        <section class="bg-white rounded shadow-sm my-4 p-4">
             <h2 class="border-start border-4 border-primary ps-3 text-primary fw-semibold mb-3">Idiomas</h2>
                 <ul>
                     <li>Inglês intermediário</li>
                 </ul>
         </section>
 
-        <footer class="bg-secondary text-white p-2 rounded fixed-bottom">
+        <footer class="bg-secondary text-white p-2 rounded mt-4 text-center">
             <small>&copy; Referências mediante solicitação!</small>
         </footer>
 
