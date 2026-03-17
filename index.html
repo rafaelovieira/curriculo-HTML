@@ -21,10 +21,67 @@
         .contact-link { text-decoration: none; color: white; transition: opacity 0.2s; }
         .contact-link:hover { opacity: 0.8; }
         .texto-justificado {text-align: justify;}
-        @media print { .btn, .card:hover { display: none !important; } .shadow-sm { shadow: none !important; } }
+        .fab-group {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1050;
+        }
+        .fab-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+        .fab-btn:hover {
+            transform: translateY(-3px) scale(1.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+        .fab-btn .fab-tooltip {
+            position: absolute;
+            right: 62px;
+            background: #333;
+            color: #fff;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            padding: 4px 10px;
+            border-radius: 6px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+        }
+        .fab-btn:hover .fab-tooltip { opacity: 1; }
+        .fab-pdf  { background: #dc3545; color: #fff; }
+        .fab-print{ background: #0d6efd; color: #fff; }
+        @media print { 
+            .fab-group { display: none !important; }
+            .card { box-shadow: none !important; transform: none !important; }
+            .btn { display: none !important; }
+            body { background: white !important; }
+            .container { max-width: 100% !important; }
+            section { break-inside: avoid; } 
+        }
     </style>
 </head>
 <body class="bg-light pb-5">
+
+    <div class="fab-group">
+        <button class="fab-btn fab-pdf" onclick="downloadPDF()">
+            <i class="bi bi-file-earmark-pdf-fill"></i>
+            <span class="fab-tooltip">Baixar PDF</span>
+        </button>
+    </div>
 
     <div class="container mt-4">
         
@@ -263,5 +320,39 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        async function downloadPDF() {
+            const btn = document.querySelector('.fab-pdf');
+            btn.innerHTML = '<i class="bi bi-hourglass-split"></i>';
+            btn.disabled = true;
+ 
+            const element = document.querySelector('.container');
+ 
+            const opt = {
+                margin:       [8, 8, 8, 8],
+                filename:     'Rafael_Vieira_Curriculo.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  {
+                    scale: 2,
+                    useCORS: true,
+                    logging: false,
+                    backgroundColor: '#f8f9fa'
+                },
+                jsPDF: {
+                    unit: 'mm',
+                    format: 'a4',
+                    orientation: 'portrait'
+                },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+ 
+            await html2pdf().set(opt).from(element).save();
+ 
+            btn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i>';
+            btn.disabled = false;
+        }
+    </script>
+
 </body>
 </html>
