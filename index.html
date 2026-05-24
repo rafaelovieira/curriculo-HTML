@@ -77,10 +77,10 @@
 <body class="bg-light pb-5">
 
     <div class="fab-group">
-        <button class="fab-btn fab-pdf" onclick="downloadPDF()">
+        <a href="meu_curriculo.pdf" download="Rafael_Vieira_Curriculo.pdf" class="fab-btn fab-pdf" style="text-decoration: none;">
             <i class="bi bi-file-earmark-pdf-fill"></i>
             <span class="fab-tooltip">Baixar PDF</span>
-        </button>
+        </a>
     </div>
 
     <div class="container mt-4">
@@ -342,39 +342,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <script>
-        async function downloadPDF() {
-            const btn = document.querySelector('.fab-pdf');
-            btn.innerHTML = '<i class="bi bi-hourglass-split"></i>';
-            btn.disabled = true;
- 
-            const element = document.querySelector('.container');
- 
-            const opt = {
-                margin:       [8, 8, 8, 8],
-                filename:     'Rafael_Vieira_Curriculo.pdf',
-                image:        { type: 'jpeg', quality: 0.98 },
-                html2canvas:  {
-                    scale: 2,
-                    useCORS: true,
-                    logging: false,
-                    backgroundColor: '#f8f9fa'
-                },
-                jsPDF: {
-                    unit: 'mm',
-                    format: 'a4',
-                    orientation: 'portrait'
-                },
-                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-            };
- 
-            await html2pdf().set(opt).from(element).save();
- 
-            btn.innerHTML = '<i class="bi bi-file-earmark-pdf-fill"></i>';
-            btn.disabled = false;
-        }
-    </script>
 
 </body>
 </html>
