@@ -64,6 +64,42 @@
         .fab-btn:hover .fab-tooltip { opacity: 1; }
         .fab-pdf  { background: #dc3545; color: #fff; }
         .fab-print{ background: #0d6efd; color: #fff; }
+        #btn-voltar-topo {
+            position: fixed;
+            bottom: 90px;
+            right: 28px;
+            display: none;
+            border-radius: 50%;
+            z-index: 99;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            padding: 0;
+        }
+        #btn-voltar-topo::before {
+            content: "Voltar ao topo";
+            position: absolute;
+            right: 60px; 
+            top: 50%;
+            transform: translateY(-50%);
+  
+            background-color: #333; 
+            color: #fff; 
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap; 
+  
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            pointer-events: none; 
+        }
+        #btn-voltar-topo:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
         @media print { 
             .fab-group { display: none !important; }
             .card { box-shadow: none !important; transform: none !important; }
@@ -84,11 +120,11 @@
 
     <div class="container mt-4">
         
-        <header class="bg-primary text-white text-center p-5 rounded shadow">
+        <header class="bg-primary text-white text-center p-4 p-md-5 rounded shadow">
             <h1 class="display-5 fw-bold">Rafael de Oliveira Vieira</h1>
             <p class="lead mb-3">Desenvolvedor Fullstack | Business Intelligence | Data Analytics | Logística Data-Driven</p>
             
-            <div class="d-flex justify-content-center gap-3 flex-wrap mb-3">
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center gap-3 gap-md-4 mb-3">
                 <span><i class="bi bi-geo-alt-fill"></i> João Pessoa-PB</span>
                 <span><i class="bi bi-telephone-fill"></i> (83) 99819-8629</span>
                 <a href="mailto:rafaelovieira.dev@gmail.com" class="contact-link"><i class="bi bi-envelope-fill"></i> rafaelovieira.dev@gmail.com</a>
@@ -100,7 +136,7 @@
 
         <section class="bg-white p-4 rounded shadow-sm my-4">
             <h2 class="section-title">Resumo</h2>
-            <p class="lh-lg fs-6 texto-justificado">
+            <p class="lh-lg fs-6 text-start text-md-justify">
                 Desenvolvedor Fullstack orientado a dados, com experiência na criação de soluções que integram desenvolvimento de software, bancos de dados e inteligência analítica. 
                 Possuo conhecimento em desenvolvimento de aplicações web utilizando Java, Spring Boot, JavaScript e React, além de domínio em SQL, PostgreSQL e ferramentas de Business Intelligence. 
                 Meu background em Engenharia e Logística proporciona uma visão sistêmica de processos de negócio, permitindo transformar dados e necessidades operacionais em soluções tecnológicas eficientes.
@@ -110,7 +146,7 @@
         <section class="bg-white p-4 rounded shadow-sm my-4">
             <h2 class="section-title">Competências Técnicas</h2>
             <div class="row g-4">
-                <div class="col-6 col-md-4">
+                <div class="col-12 col-md-4">
                     <h5 class="fw-bold mb-3"><i class="bi bi-code-slash text-primary"></i> Frontend</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="20" alt="React" class="me-2"> React / Hooks</li>
@@ -120,7 +156,7 @@
                         <li class="mb-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="20" alt="HTML" class="me-2"> HTML5 / CSS3</li>
                     </ul>
                 </div>
-                <div class="col-6 col-md-4">
+                <div class="col-12 col-md-4">
                     <h5 class="fw-bold mb-3"><i class="bi bi-database-fill-gear text-primary"></i> Backend & BD</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="20" alt="Java" class="me-2"> Java / Spring Boot</li>
@@ -364,6 +400,29 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <button type="button" class="btn btn-primary btn-lg" id="btn-voltar-topo">
+        <i class="bi bi-file-earmark-arrow-up"></i>
+    </button>
+
+    <script>
+        let btnTopo = document.getElementById("btn-voltar-topo");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btnTopo.style.display = "block";
+            } else {
+                btnTopo.style.display = "none";
+            }
+        };
+
+        btnTopo.addEventListener("click", function() {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 
 </body>
 </html>
